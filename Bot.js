@@ -1,8 +1,8 @@
 const discord = require(`discord.js`),
       fs = require(`fs`),
-      test = require(`./Test.json`),
+      test = require(`https://github.com/Bidoofnationwillprevail/Bot/blob/master/Json.json`),
       client = new discord.Client({disableEveryone: true});
-client.login(test.token);
+client.login(process.env.BOT_TOKEN);
 client.on('error', console.error);
 client.on(`ready`, () => {
   client.user.setPresence({status: "online", game: {name: "World Domination", type: "PLAYING" }});
